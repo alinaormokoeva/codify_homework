@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{%block content%} 
+<style>
+   .fig {
+    text-align: center; /* Выравнивание по центру */ 
+   } 
+   
+</style>
+<h1 align="center" class="new" style="color:darkblue">Python blog</h1> 
+<p class="fig"><img src="https://365datascience.com/resources/blog/thumb@1024_2019-10-python-everything-you-should-know-1024x576.jpg" width="900" height="400" alt="Фотография"></p>
+<p class="new" style="color:darkblue">
+    Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python’s elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms.
+
+    The Python interpreter and the extensive standard library are freely available in source or binary form for all major platforms from the Python web site and may be freely distributed. The same site also contains distributions of and pointers to many free third party Python modules, programs and tools, and additional documentation.
+    
+    The Python interpreter is easily extended with new functions and data types implemented in C or C++ (or other languages callable from C). Python is also suitable as an extension language for customizable applications.
+    
+    </p>
+<form action="" method='post' style= 'max-width: 400px; margin: auto'>
+    {% csrf_token %}
+    {{form.as_p}}
+    <button class='btn btn-success'>Send</button>
+{%endblock%}
